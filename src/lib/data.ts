@@ -98,7 +98,7 @@ export const MOCK_ARTICLES: Article[] = [
     title: 'Uniswap v4 Launches with Customizable Hooks Architecture',
     excerpt: 'The long-awaited v4 protocol goes live on Ethereum mainnet, introducing hooks for custom AMM logic, singleton contracts for gas efficiency, and native ETH support.',
     content: `
-      <p>Uniswap v4 is now live on Ethereum mainnet after months of audits and testnet iterations. The upgrade introduces a fundamentally new architecture centered on "hooks" — customizable smart contracts that can modify pool behavior at key lifecycle points.</p>
+      <p>Uniswap v4 is now live on Ethereum mainnet after months of audits and testnet iterations. The upgrade introduces a fundamentally new architecture centered on "hooks" - customizable smart contracts that can modify pool behavior at key lifecycle points.</p>
       
       <h2>Hooks Enable Innovation</h2>
       <p>Developers can now build custom logic for dynamic fees, on-chain limit orders, TWAMM implementations, and impermanent loss protection directly into liquidity pools.</p>
@@ -294,6 +294,10 @@ export function getFeaturedArticles(): Article[] {
 export function getCategories(): Category[] {
   return CATEGORIES
 }
+export function getAllArticleSlugs(): string[] {
+  return MOCK_ARTICLES.map((article) => article.slug)
+}
+
 
 export function getAuthorById(id: string): Author | undefined {
   return AUTHORS.find(a => a.id === id)

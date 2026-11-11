@@ -1,0 +1,77 @@
+# CoinNewsWired - AI Crawler Guide
+
+## Site Information
+- **Name**: CoinNewsWired
+- **Description**: Leading source for crypto news, Bitcoin price analysis, Ethereum updates, DeFi, NFTs, regulation and blockchain technology
+- **URL**: https://coinnewswired.online
+- **Language**: en-US
+- **Content Type**: Cryptocurrency news, market analysis, educational content
+
+## Content Structure
+
+### Main Sections
+- **Home** (`/`): Featured articles, breaking news, latest articles, market analysis, magazine
+- **Latest** (`/latest`): All articles with pagination
+- **Categories** (`/category/[slug]`): Articles by category
+  - Bitcoin (`/category/bitcoin`)
+  - Ethereum (`/category/ethereum`)
+  - DeFi (`/category/defi`)
+  - NFTs (`/category/nfts`)
+  - Regulation (`/category/regulation`)
+  - Trading (`/category/trading`)
+  - Web3 (`/category/web3`)
+  - Mining (`/category/mining`)
+- **Article** (`/article/[slug]`): Individual article pages with full content
+- **Newsletter** (`/api/newsletter`): Newsletter subscription endpoint
+
+### Content Types
+1. **News Articles**: Breaking crypto news, market updates, regulatory developments
+2. **Market Analysis**: Price analysis, technical analysis, market trends
+3. **Educational Content**: Guides, tutorials, explainers
+4. **Magazine**: Long-form features, interviews, opinion pieces
+
+## Article Schema
+Each article contains:
+- **Title**: Headline
+- **Excerpt**: Brief summary
+- **Content**: Full article body (HTML)
+- **Cover Image**: Featured image URL
+- **Category**: One of 8 categories with color/icon
+- **Author**: Name, avatar, bio, social links
+- **Published Date**: ISO 8601 format
+- **Updated Date**: ISO 8601 format
+- **Read Time**: Estimated reading time in minutes
+- **Breaking**: Boolean flag for breaking news
+- **Slug**: URL-friendly identifier
+
+## Structured Data
+Pages include JSON-LD structured data:
+- **NewsArticle** schema on article pages
+- **WebSite** schema on homepage
+- **Organization** schema site-wide
+- **BreadcrumbList** on category and article pages
+
+## SEO Features
+- Dynamic sitemap.xml at `/sitemap.xml`
+- robots.txt at `/robots.txt`
+- RSS 2.0 feed at `/rss.xml`
+- Open Graph and Twitter Card meta tags
+- Canonical URLs
+- Semantic HTML5 structure
+- Proper heading hierarchy (h1-h3)
+- Alt text for all images
+- ARIA labels for accessibility
+
+## Crawling Guidelines
+- **Respect robots.txt**: Disallows admin, api, private paths
+- **Rate Limit**: Be respectful, limit requests
+- **Follow sitemap.xml**: For discovering all content
+- **Check RSS feed**: For real-time updates
+- **Use structured data**: For rich snippet extraction
+
+## API Endpoints
+- `POST /api/newsletter` - Subscribe to newsletter (email required)
+
+## Contact
+- **Email**: research@kingdomtrades.com
+- **Website**: https://kingdomtrades.com

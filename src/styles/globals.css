@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-inter-mono: 'Roboto Mono', monospace;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .article-card {
+    @apply block bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800 transition-all duration-200 hover:shadow-md hover:border-orange-500/50;
+  }
+  
+  .article-card-image {
+    @apply relative overflow-hidden aspect-video bg-gray-100 dark:bg-gray-800;
+  }
+  
+  .article-card-content {
+    @apply p-4;
+  }
+  
+  .article-card-meta {
+    @apply flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-2;
+  }
+  
+  .article-card-title {
+    @apply text-lg font-bold text-gray-900 dark:text-white line-clamp-2 mb-3;
+  }
+  
+  .article-card-footer {
+    @apply flex items-center gap-2;
+  }
+  
+  .article-card-author {
+    @apply flex items-center gap-2;
+  }
+  
+  .article-card-author img {
+    @apply w-6 h-6 rounded-full;
+  }
+  
+  .article-card-author-name {
+    @apply text-sm text-gray-600 dark:text-gray-300;
+  }
+  
+  .breaking-banner {
+    @apply bg-orange-50 border-b-2 border-orange-500 dark:bg-orange-900/30 dark:border-orange-500;
+  }
+  
+  .breaking-label {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 text-xs font-bold text-orange-500 bg-orange-100 rounded-full dark:bg-orange-900/50 dark:text-orange-400;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
