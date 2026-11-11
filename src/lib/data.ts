@@ -1,3 +1,4 @@
+// Deploy trigger 1794385361.745592
 import { Article, Category, Author, CATEGORIES } from './types'
 
 export const AUTHORS: Author[] = [
