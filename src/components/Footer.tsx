@@ -55,8 +55,8 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {CATEGORIES.slice(0, 4).map((category) => (
                 <li key={category.id}>
-                  <Link href={`/category/${category.slug}`} className="text-sm text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400">
-                    {category.icon} {category.name}
+                  <Link href={`/category/${category.slug}`} className="text-sm text-gray-600 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-400 flex items-center gap-1">
+                    <span style={{ fontSize: '12px', lineHeight: '1' }}>{category.icon}</span>{category.name}
                   </Link>
                 </li>
               ))}
