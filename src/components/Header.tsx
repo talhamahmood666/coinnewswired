@@ -208,7 +208,7 @@ export function Header() {
                 )}
                 aria-current={pathname && pathname === "/category/" + category.slug ? 'page' : undefined}
               >
-                <span style={{ color: category.color }}>{category.icon}</span>
+                <span style={{ color: category.color, fontSize: '10px', lineHeight: '1', display: 'inline-flex', alignItems: 'center' }}>{category.icon}</span>
                 {category.name}
               </Link>
             ))}

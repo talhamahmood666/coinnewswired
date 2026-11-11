@@ -63,7 +63,7 @@ export function ArticleCard({ article, variant = 'default', className }: Article
               'rounded-full px-2 py-0.5 text-xs font-medium',
               `bg-${article.category.color}/10 text-${article.category.color} dark:bg-${article.category.color}/20`
             )}>
-              {article.category.icon} {article.category.name}
+              <span style={{ fontSize: '10px', lineHeight: '1', marginRight: '4px' }}>{article.category.icon}</span>{article.category.name}
             </span>
           </div>
         </div>

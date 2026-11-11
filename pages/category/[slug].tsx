@@ -36,7 +36,7 @@ export default function CategoryPage({ category, articles, categories }: Props) 
         
         <header className="mb-8">
           <div className="flex items-center gap-3">
-            <span className="text-4xl">{category.icon}</span>
+            <span style={{ fontSize: '2.5rem', lineHeight: '1' }}>{category.icon}</span>
             <div>
               <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{category.name}</h1>
               <p className="mt-1 text-gray-600 dark:text-gray-400">{category.description}</p>
@@ -72,7 +72,7 @@ export default function CategoryPage({ category, articles, categories }: Props) 
                   <Link href={"/article/" + article.slug} className="article-card-image" aria-label={"Read: " + article.title}>
                     <img src={article.coverImage} alt="" loading="lazy" width="400" height="225" />
                     <span className="article-card-category" style={{ background: article.category.color, color: 'white' }}>
-                      {article.category.icon} {article.category.name}
+                      <span style={{ fontSize: '10px', lineHeight: '1', marginRight: '4px', display: 'inline-flex', alignItems: 'center' }}>{article.category.icon}</span>{article.category.name}
                     </span>
                   </Link>
                   <div className="article-card-content">
